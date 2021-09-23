@@ -262,8 +262,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 align="center">React-App</h1>
-      <h4 align='center'>Crash Course on Material Table </h4>
+      <h1 align="center">User Table Assignment</h1>
 
       <MaterialTable columns={columns} data={tableData}
         editable={{
@@ -301,7 +300,7 @@ function App() {
           rowStyle: (data, index) => index % 2 === 0 ? { background: "#f5f5f5" } : null,
           headerStyle: { background: "#A7BBC7",color:"#fff"}
         }}
-        title="Student Information"
+        title="User Information"
         />
     </div>
   );
