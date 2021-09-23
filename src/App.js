@@ -263,7 +263,7 @@ function App() {
   return (
     <div className="App">
       <h1 align="center">User Table Assignment</h1>
-      <h3 align="center">using Material Tablw</h3>
+      <h3 align="center">using Material Table</h3>
     <Container>
       <MaterialTable columns={columns} data={tableData} title="User Information"
         editable={{
