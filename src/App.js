@@ -289,13 +289,10 @@ function App() {
         options={{
           sorting: true, search: true,
           searchFieldAlignment: "right", searchAutoFocus: true, searchFieldVariant: "standard",
-          filtering: true, paging: true, pageSizeOptions: [2, 5, 10, 20, 25, 50, 100], pageSize: 5,
-          paginationType: "stepped", showFirstLastPageButtons: false, paginationPosition: "both", exportButton: true,
+          filtering: true, paging: true, pageSizeOptions: [5, 10, 20, 25, 50, 100], pageSize: 5,
+          paginationType: "stepped", showFirstLastPageButtons: false, exportButton: true,
           exportAllData: true, exportFileName: "TableData", addRowPosition: "first", actionsColumnIndex: -1, selection: true,
-          showSelectAllCheckbox: false, showTextRowsSelected: false, selectionProps: rowData => ({
-            disabled: rowData.age == null,
-            // color:"primary"
-          }),
+          showSelectAllCheckbox: false, showTextRowsSelected: false,
           grouping: true, columnsButton: true,
           rowStyle: (data, index) => index % 2 === 0 ? { background: "#f5f5f5" } : null,
           headerStyle: { background: "#A7BBC7",color:"#fff"}
