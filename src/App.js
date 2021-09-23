@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import './App.css';
 import MaterialTable from 'material-table';
-// import { Container } from '@material-ui/core'
+import { Container } from '@material-ui/core'
 //import axios from 'axios';
 
 
@@ -263,8 +263,9 @@ function App() {
   return (
     <div className="App">
       <h1 align="center">User Table Assignment</h1>
-
-      <MaterialTable columns={columns} data={tableData}
+      <h3 align="center">using Material Tablw</h3>
+    <Container>
+      <MaterialTable columns={columns} data={tableData} title="User Information"
         editable={{
           onRowAdd: (newRow) => new Promise((resolve, reject) => {
             setTableData([...tableData, newRow])
@@ -285,7 +286,6 @@ function App() {
 
           })
         }}
-        onSelectionChange={(selectedRows) => console.log(selectedRows)}
         options={{
           sorting: true, search: true,
           searchFieldAlignment: "right", searchAutoFocus: true, searchFieldVariant: "standard",
@@ -297,8 +297,8 @@ function App() {
           rowStyle: (data, index) => index % 2 === 0 ? { background: "#f5f5f5" } : null,
           headerStyle: { background: "#A7BBC7",color:"#fff"}
         }}
-        title="User Information"
         />
+    </Container>
     </div>
   );
 }
